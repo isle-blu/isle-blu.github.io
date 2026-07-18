@@ -115,7 +115,63 @@
   &[data-callout="quote"] {
     --color: var(--secondary);
     --border: var(--lightgray);
+    --bg: color-mix(in srgb, var(--secondary) 10%, transparent);
     --callout-icon: var(--callout-icon-quote);
+  }
+
+  :root[saved-theme="dark"] & {
+    &[data-callout] {
+      --color: #68a0ff;
+      --bg: #448aff26;
+    }
+
+    &[data-callout="abstract"] {
+      --color: #00b0ff;
+      --bg: #00b0ff26;
+    }
+
+    &[data-callout="info"],
+    &[data-callout="todo"] {
+      --color: #00b8d4;
+      --bg: #00b8d426;
+    }
+
+    &[data-callout="tip"] {
+      --color: #00bfa5;
+      --bg: #00bfa526;
+    }
+
+    &[data-callout="success"] {
+      --color: #0ab781;
+      --bg: #09ad7a26;
+    }
+
+    &[data-callout="question"] {
+      --color: #dba642;
+      --bg: #dba64226;
+    }
+
+    &[data-callout="warning"] {
+      --color: #dd8e4b;
+      --bg: #db894226;
+    }
+
+    &[data-callout="failure"],
+    &[data-callout="danger"],
+    &[data-callout="bug"] {
+      --color: #e78282;
+      --bg: #db424226;
+    }
+
+    &[data-callout="example"] {
+      --color: #b392d7;
+      --bg: #7a43b526;
+    }
+
+    &[data-callout="quote"] {
+      --color: var(--secondary);
+      --bg: color-mix(in srgb, var(--secondary) 15%, transparent);
+    }
   }
 
   &.is-collapsed {

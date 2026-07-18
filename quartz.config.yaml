@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Quartz 5
+  pageTitle: isle-blu-dev
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
@@ -21,23 +21,23 @@ configuration:
       code: IBM Plex Mono
     colors:
       lightMode:
-        light: "#faf8f8"
-        lightgray: "#e5e5e5"
-        gray: "#b8b8b8"
-        darkgray: "#4e4e4e"
-        dark: "#2b2b2b"
-        secondary: "#284b63"
-        tertiary: "#84a59d"
+        light: "#f6f7f9"
+        lightgray: "#e0e3eb"
+        gray: "#a2a9b9"
+        darkgray: "#525e7a"
+        dark: "#151b28"
+        secondary: "#2d56be"
+        tertiary: "#3f5a8d"
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#fff23688"
       darkMode:
-        light: "#161618"
-        lightgray: "#393639"
-        gray: "#646464"
-        darkgray: "#d4d4d4"
-        dark: "#ebebec"
-        secondary: "#7b97aa"
-        tertiary: "#84a59d"
+        light: "#10131a"
+        lightgray: "#232838"
+        gray: "#4b5468"
+        darkgray: "#c7cdda"
+        dark: "#eef1f7"
+        secondary: "#5b7fd9"
+        tertiary: "#8aa0c9"
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#b3aa0288"
 plugins:
@@ -157,7 +157,7 @@ plugins:
     layout:
       position: left
       priority: 50
-  - source: github:quartz-community/graph
+  - source: ./vendor/quartz-plugins/graph
     enabled: true
     layout:
       position: right
@@ -262,7 +262,7 @@ plugins:
       name: quartz-themes
       repo: github:saberzero1/quartz-themes
       subdir: plugin
-    enabled: true
+    enabled: false
     options:
       theme: default
   - source: github:quartz-community/obsidian-plugin-excalidraw
