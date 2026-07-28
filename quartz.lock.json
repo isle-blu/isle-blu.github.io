@@ -194,10 +194,10 @@
       "installedAt": "2026-07-18T14:24:46.184Z"
     },
     "page-title": {
-      "source": "github:quartz-community/page-title",
-      "resolved": "https://github.com/quartz-community/page-title.git",
-      "commit": "a1c1fe0a9c6a5ce1acf6efa01d473a7d9850e2a3",
-      "installedAt": "2026-07-18T14:24:48.417Z"
+      "source": "./vendor/quartz-plugins/page-title",
+      "resolved": "/Users/dingding/code/blog/vendor/quartz-plugins/page-title",
+      "commit": "local",
+      "installedAt": "2026-07-27T08:45:22.163Z"
     },
     "quartz-themes": {
       "source": {
