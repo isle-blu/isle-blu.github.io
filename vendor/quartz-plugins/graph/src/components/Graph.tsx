@@ -64,15 +64,17 @@ const defaultOptions: GraphOptions = {
 };
 
 export default ((userOpts?: Partial<GraphOptions>) => {
-  const Graph: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) => {
+  const Graph: QuartzComponent = ({ displayClass, cfg, fileData }: QuartzComponentProps) => {
     const localGraph = { ...defaultOptions.localGraph, ...userOpts?.localGraph };
     const globalGraph = { ...defaultOptions.globalGraph, ...userOpts?.globalGraph };
+    const isIndexPage = fileData.slug === "index"
+    const sidebarGraph = isIndexPage ? { ...globalGraph, focusOnHover: false, enableRadial: false } : localGraph
 
     return (
       <div class={classNames(displayClass, "graph")}>
         <h3>{i18n(cfg.locale ?? "en-US").components.graph.title}</h3>
         <div class="graph-outer">
-          <div class="graph-container" data-cfg={JSON.stringify(localGraph)}></div>
+          <div class="graph-container" data-cfg={JSON.stringify(sidebarGraph)}></div>
           <button class="global-graph-icon" aria-label="Global Graph">
             <svg
               version="1.1"

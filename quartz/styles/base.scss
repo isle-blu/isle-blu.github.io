@@ -190,6 +190,7 @@ a {
 
   & > #quartz-body {
     display: grid;
+    transition: grid-template-columns 0.2s ease;
     grid-template-columns: #{map.get($desktopGrid, templateColumns)};
     grid-template-rows: #{map.get($desktopGrid, templateRows)};
     column-gap: #{map.get($desktopGrid, columnGap)};
@@ -307,6 +308,40 @@ a {
       margin-left: 0;
     }
   }
+}
+
+// ============================================================================
+// Collapsible Left Sidebar
+// ============================================================================
+
+:root[data-sidebar-collapsed="true"] {
+  & .page > #quartz-body {
+    @media all and ($desktop) {
+      grid-template-columns: 7.5rem auto #{$sidePanelWidth};
+    }
+    @media all and ($tablet) {
+      grid-template-columns: 7.5rem auto;
+    }
+
+    & .sidebar.left {
+      @media all and not ($mobile) {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+
+        & > *:not(.page-title):not(:has(.left-nav-toggle)) {
+          display: none;
+        }
+
+        & > .flex-component:has(.left-nav-toggle) {
+          flex-direction: column !important;
+        }
+      }
+    }
+  }
+}
+
+.page > #quartz-body .sidebar.left {
+  transition: padding 0.2s ease;
 }
 
 // ============================================================================

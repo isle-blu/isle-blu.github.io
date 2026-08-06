@@ -240,6 +240,12 @@
       "commit": "0f4c1a233cd03a0f562e13636b89b7708f8e2698",
       "installedAt": "2026-07-18T14:24:47.814Z"
     },
+    "sidebar-toggle": {
+      "source": "./vendor/quartz-plugins/sidebar-toggle",
+      "resolved": "/Users/dingding/code/blog/vendor/quartz-plugins/sidebar-toggle",
+      "commit": "local",
+      "installedAt": "2026-08-05T07:14:57.738Z"
+    },
     "spacer": {
       "source": "github:quartz-community/spacer",
       "resolved": "https://github.com/quartz-community/spacer.git",

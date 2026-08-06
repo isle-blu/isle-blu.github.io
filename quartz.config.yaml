@@ -195,18 +195,24 @@ plugins:
     layout:
       position: left
       priority: 10
+  - source: ./vendor/quartz-plugins/sidebar-toggle
+    enabled: true
+    layout:
+      position: left
+      priority: 15
+      group: navControls
   - source: github:quartz-community/darkmode
     enabled: true
     layout:
       position: left
-      priority: 30
-      group: toolbar
+      priority: 16
+      group: navControls
   - source: github:quartz-community/reader-mode
     enabled: true
     layout:
       position: left
-      priority: 35
-      group: toolbar
+      priority: 17
+      group: navControls
   - source: github:quartz-community/breadcrumbs
     enabled: true
     layout:
@@ -274,6 +280,10 @@ plugins:
     order: 50
 layout:
   groups:
+    navControls:
+      priority: 15
+      direction: row
+      gap: 0.5rem
     toolbar:
       priority: 35
       direction: row

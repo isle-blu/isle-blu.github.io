@@ -26,6 +26,22 @@ PageTitle.css = `
   font-size: 1.75rem;
   margin: 0;
   font-family: var(--titleFont);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+@media all and (min-width: 800px) {
+  .page-title {
+    position: fixed;
+    top: 1.5rem;
+    left: 2rem;
+    z-index: 2;
+    padding: 0.3rem 0.6rem;
+    margin-left: -0.6rem;
+    border-radius: 5px;
+    background-color: var(--light);
+  }
 }
 
 .page-title-cursor {
